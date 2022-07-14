@@ -1,0 +1,185 @@
+
+seed(2000), vertexcover(9, 30, C).
+seed(1000), vertexcover(17, 50, C).
+seed(12345), vertexcover(33, 65, C).
+seed(1), vertexcover(100, 70, C), length(C, L).
+seed(100), vertexcover(100, 35, C), length(C, L).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+seed(1), maxclq(1, 100, Clique, Size).
+seed(1), maxclq(2, 100, Clique, Size).
+seed(1), maxclq(3, 100, Clique, Size).
+seed(1), maxclq(4, 60, Clique, Size).
+
+seed(1), maxclq(5, 50, Clique, Size).
+seed(1), maxclq(5, 70, Clique, Size).
+seed(1), maxclq(5, 90, Clique, Size).
+seed(1), maxclq(5, 100, Clique, Size).
+
+seed(1), maxclq(8, 80, Clique, Size).
+seed(2022), maxclq(15, 60, Clique, Size).
+seed(100), maxclq(32, 50, Clique, Size).
+seed(12345), maxclq(80, 50, Clique, Size).
+seed(8231), maxclq(120, 40, Clique, Size).
+seed(1010101), maxclq(165, 30, Clique, Size).
+seed(654321), maxclq(220, 20, Clique, Size).
+seed(1111), maxclq(300, 15, Clique, Size).
+seed(1821), maxclq(500, 10, Clique, Size).
+seed(1), maxclq(800, 2, Clique, Size).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+createComplementaryGraph(N, InitialGraph, FinalGraph) :-
+    %remove_elements(GFull, InitialGraph, FinalGraph).
+    %subtract(GFull, InitialGraph, FinalGraph).
+    %bagof(Edge, isInFirstNotInSecond(Edge, GFull, InitialGraph), FinalGraph).
+%forLoopEdges :-
+%    L = [0,1,2,3,4],
+%    member(I, L),
+%	member(J, L),
+%    write(I), write(" "), write(J), nl.
+%isInFirstNotInSecond(El, L1, L2) :-
+%    member(El, L1),
+%    not member(El, L2).
+%remove_elements(L, [H|T], R) :-
+%    member(H, L),
+%    !,
+%    delete(H, L, R1),
+%    remove_elements(R1, T, R).
+%remove_elements(L, [_|T], R) :-
+%    remove_elements(L, T, R).
+%remove_elements(L, [], L).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+165
+--------------------------------
+Method: input_order  ChooseVar: indomain  Strat: continue
+--------------------------------
+Clique is [2, 12, 21, 33, 85, 148, 151] with size 7.
+Time: 1.609375 secs.
+
+--------------------------------
+Method: input_order  ChooseVar: indomain_split  Strat: continue
+--------------------------------
+Clique is [2, 12, 21, 33, 85, 148, 151] with size 7.
+Time: 1.609375 secs.
+
+--------------------------------
+Method: first_fail  ChooseVar: indomain  Strat: continue
+--------------------------------
+Clique is [2, 12, 21, 33, 85, 148, 151] with size 7.
+Time: 1.65625 secs.
+
+--------------------------------
+Method: first_fail  ChooseVar: indomain_split  Strat: continue
+--------------------------------
+Clique is [2, 12, 21, 33, 85, 148, 151] with size 7.
+Time: 1.71875 secs.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+220
+--------------------------------
+Method: input_order  ChooseVar: indomain  Strat: continue
+--------------------------------
+Clique is [10, 31, 56, 128, 143, 151] with size 6.
+Time: 3.28125 secs.
+
+--------------------------------
+Method: input_order  ChooseVar: indomain_split  Strat: continue
+--------------------------------
+Clique is [10, 31, 56, 128, 143, 151] with size 6.
+Time: 3.859375 secs.
+
+--------------------------------
+Method: first_fail  ChooseVar: indomain  Strat: continue
+--------------------------------
+Clique is [10, 31, 56, 128, 143, 151] with size 6.
+Time: 4.265625 secs.
+
+--------------------------------
+Method: first_fail  ChooseVar: indomain_split  Strat: continue
+--------------------------------
+Clique is [10, 31, 56, 128, 143, 151] with size 6.
+Time: 4.234375 secs.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+300
+--------------------------------
+Method: input_order  ChooseVar: indomain  Strat: continue
+--------------------------------
+Clique is [2, 35, 119, 174, 247] with size 5.
+Time: 7.90625 secs.
+
+--------------------------------
+Method: input_order  ChooseVar: indomain_split  Strat: continue
+--------------------------------
+Clique is [2, 35, 119, 174, 247] with size 5.
+Time: 10.28125 secs.
+
+--------------------------------
+Method: first_fail  ChooseVar: indomain  Strat: continue
+--------------------------------
+Clique is [2, 35, 119, 174, 247] with size 5.
+Time: 9.984375 secs.
+
+--------------------------------
+Method: first_fail  ChooseVar: indomain_split  Strat: continue
+--------------------------------
+Clique is [2, 35, 119, 174, 247] with size 5.
+Time: 9.046875 secs.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+500
+--------------------------------
+Method: input_order  ChooseVar: indomain  Strat: continue
+--------------------------------
+Clique is [8, 14, 86, 260, 425] with size 5.
+Time: 44.4375 secs.
+
+--------------------------------
+Method: input_order  ChooseVar: indomain_split  Strat: continue
+--------------------------------
+Clique is [8, 14, 86, 260, 425] with size 5.
+Time: 47.203125 secs.
+
+--------------------------------
+Method: first_fail  ChooseVar: indomain  Strat: continue
+--------------------------------
+Clique is [8, 14, 86, 260, 425] with size 5.
+Time: 50.71875 secs.
+
+--------------------------------
+Method: first_fail  ChooseVar: indomain_split  Strat: continue
+--------------------------------
+Clique is [8, 14, 86, 260, 425] with size 5.
+Time: 46.40625 secs.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+800
+--------------------------------
+Method: input_order  ChooseVar: indomain  Strat: continue
+--------------------------------
+Clique is [79, 498, 538, 588] with size 4.
+Time: 75.140625 secs.
+
+--------------------------------
+Method: input_order  ChooseVar: indomain_split  Strat: continue
+--------------------------------
+Clique is [79, 498, 538, 588] with size 4.
+Time: 75.984375 secs.
+
+--------------------------------
+Method: first_fail  ChooseVar: indomain  Strat: continue
+--------------------------------
+Clique is [79, 498, 538, 588] with size 4.
+Time: 75.46875 secs.
+
+--------------------------------
+Method: first_fail  ChooseVar: indomain_split  Strat: continue
+--------------------------------
+Clique is [79, 498, 538, 588] with size 4.
+Time: 76.65625 secs.

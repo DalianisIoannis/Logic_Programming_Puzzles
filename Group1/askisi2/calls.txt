@@ -1,0 +1,56 @@
+
+codegen([a,b], [a,a], L).
+codegen([a], [a], L).
+codegen([a], [*], L).
+codegen([a,b,c], [*,*,*], L).
+codegen([a,b,c], [*,*,b], L).
+codegen([a,b,c], [a,a,c], L).
+codegen([a,b,c], [a,b,b], L).
+codegen([a,b,c,e], [a,b,b,b], L).
+
+codegen([a,b,c,e,f], [a,b,b,e,e], L).
+codegen([a,b,b,a], [a,a,b,b], L)
+codegen([a,b,c,d], [a,b,c,d], L).
+
+codegen([a,b,c,d], [a,d,a,b], L).
+codegen([a,*,c],[c,a,*],L).
+codegen([a,b,c],[a,a,*],L).
+codegen([a,b,c,d,e,f], [f,f,b,e,a,e],L).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+compareLists([a,b,c,d], [a,b,c,d]).
+compareLists([a,b,c,d], [a,b,g,d]).
+compareLists([a,b,c,d], [a,b,*,d]).
+compareLists([a,*,c,d], [a,b,c,d]).
+
+makeCounterList(0, 4, Nums).
+
+move([a,*], L, 1).
+move([a,b], L, 1).
+move([a,b], L, 2).
+move([a,b,c], L, 1).
+move([a,b,c], L, 2).
+move([a,b,c], L, 3).
+move([a,b,c,d], L, 1).
+move([a,b,c,d], L, 3).
+move([a,b,c,d,e], L, 1).
+move([a,b,c,d,e], L, 4).
+move([a,b,c,d,e], L, 5).
+
+getNthItem(X, [a,b], 1).
+getNthItem(X, [a,b], 2).
+getNthItem(X, [a,b,c,d,e], 1).
+getNthItem(X, [a,b,c,d,e], 2).
+getNthItem(X, [a,b,c,d,e], 5).
+
+appendUntil([a,b,c,d,e], 1, ListRet).
+appendUntil([a,b,c,d,e], 2, ListRet).
+appendUntil([a,b,c,d,e], 5, ListRet).
+
+deleteFirstN([a,b,c,d,e], 3, List).
+
+swap([a,b,c,d,e], 2, 4, List).
+swap([a,b,c,d,e], 1, 3, List).
+swap([a,b], 1, 2, List).
